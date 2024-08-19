@@ -10,17 +10,20 @@ export default function Gallery() {
     </Carousel.Slide>
   ));
 
-  const [embla, setEmbla] = useState<Embla | null>(null);
-
-  useAnimationOffsetEffect(embla, 1);
+  const [embla0, setEmbla0] = useState<Embla | null>(null);
+  useAnimationOffsetEffect(embla0, 1);
+  const [embla1, setEmbla1] = useState<Embla | null>(null);
+  useAnimationOffsetEffect(embla1, 1);
 
   return (
     <Box className={classes.wrapper} id="gallery">
       <Badge color="green" className={classes.badge} mb="md">
         Cool Images
       </Badge>
-      <Title order={1}>In-Game Gallery</Title>
-      <Container size={660} p={0}>
+      <Title order={1} ta="center">
+        In-Game Gallery
+      </Title>
+      <Container size={660} p={0} mx="md">
         <Text c="dimmed" className={classes.description}>
           Explore a curated selection of breathtaking screenshots and highlights from our server.
           See the creativity and adventures that make our community unique.
@@ -28,14 +31,18 @@ export default function Gallery() {
       </Container>
       <Carousel
         mt="xl"
-        getEmblaApi={setEmbla}
+        getEmblaApi={setEmbla0}
         dragFree
         slideSize="50%"
         slideGap="md"
         height={500}
         loop
         initialSlide={2}
+        visibleFrom="md"
       >
+        {slides}
+      </Carousel>
+      <Carousel mt="xl" getEmblaApi={setEmbla1} height={400} loop initialSlide={2} hiddenFrom="md">
         {slides}
       </Carousel>
     </Box>

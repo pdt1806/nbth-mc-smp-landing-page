@@ -6,14 +6,14 @@ import classes from './index.module.css';
 export function PreFooter() {
   const buttons = (
     <>
-      <Button className={classes.control} color="green" size="lg">
+      <Button className={classes.button} color="green" size="lg">
         <Group gap="xs">
           <IconBrandMinecraft style={{ width: 20, height: 20 }} />
           <Text fw="bold">Join the Server</Text>
         </Group>
       </Button>
       <Button
-        className={classes.control}
+        className={classes.button}
         color="#5865F2"
         size="lg"
         component={Link}
@@ -42,11 +42,11 @@ export function PreFooter() {
           </Text>
         </Container>
 
-        <Center>
-          <Group gap="xs" mt="xl" visibleFrom="xs">
+        <Center mt="xl">
+          <Group gap="xs" visibleFrom="xs">
             {buttons}
           </Group>
-          <Stack gap="xs" mt="xl" hiddenFrom="xs">
+          <Stack gap="xs" hiddenFrom="xs">
             {buttons}
           </Stack>
         </Center>

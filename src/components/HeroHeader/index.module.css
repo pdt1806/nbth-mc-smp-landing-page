@@ -1,14 +1,12 @@
 .wrapper {
   position: relative;
-  padding-top: rem(280px);
-  padding-bottom: rem(230px);
+  padding: rem(280px) 0;
   background-image: url('/images/hero-header-bg.webp');
   background-size: cover;
   background-position: center;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    padding-top: rem(80px);
-    padding-bottom: rem(50px);
+    padding: rem(180px) 0;
   }
 }
 
@@ -43,39 +41,7 @@
   }
 }
 
-.controls {
-  margin-top: calc(var(--mantine-spacing-xl) * 1.5);
-  display: flex;
-  justify-content: center;
-  padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    flex-direction: column;
-  }
-}
-
-.control {
+.button {
   height: rem(42px);
   font-size: var(--mantine-font-size-md);
-
-  &:not(:first-of-type) {
-    margin-left: var(--mantine-spacing-md);
-  }
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    &:not(:first-of-type) {
-      margin-top: var(--mantine-spacing-md);
-      margin-left: 0;
-    }
-  }
-}
-
-.secondaryControl {
-  color: var(--mantine-color-white);
-  background-color: rgba(255, 255, 255, 0.4);
-
-  @mixin hover {
-    background-color: rgba(255, 255, 255, 0.45);
-  }
 }

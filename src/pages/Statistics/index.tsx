@@ -53,7 +53,7 @@ export function Statistics() {
   return (
     <Box className={classes.wrapper} id="stats">
       <Container size="xl">
-        <Grid gutter={80}>
+        <Grid gutter={60}>
           <Grid.Col span={{ base: 12, md: 5 }}>
             <Title className={classes.title} order={2} c="black">
               Statistics

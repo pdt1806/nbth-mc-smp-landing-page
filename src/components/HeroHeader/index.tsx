@@ -1,4 +1,4 @@
-import { Button, Container, Overlay, Text, Title } from '@mantine/core';
+import { Button, Center, Container, Overlay, Text, Title } from '@mantine/core';
 import classes from './index.module.css';
 
 export function HeroHeader() {
@@ -26,11 +26,11 @@ export function HeroHeader() {
           </Text>
         </Container>
 
-        <div className={classes.controls}>
-          <Button className={classes.control} variant="white" size="lg" c="darkgreen">
+        <Center mt="xl">
+          <Button className={classes.button} variant="white" size="lg" c="#286422">
             Get IP Address
           </Button>
-        </div>
+        </Center>
       </div>
     </div>
   );

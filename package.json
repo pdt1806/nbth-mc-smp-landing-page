@@ -1,25 +1,19 @@
 {
-  "name": "personal-website",
-  "private": true,
-  "version": "4.1.0",
+  "name": "nbth-mc-smp-landing-page",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "prettier": "prettier --check \"**/*.{ts,tsx}\"",
-    "prettier:write": "prettier --write \"**/*.{ts,tsx}\""
+    "preview": "vite preview"
   },
   "dependencies": {
     "@mantine/carousel": "^7.12.1",
     "@mantine/core": "7.12.1",
     "@mantine/hooks": "7.12.1",
     "@tabler/icons-react": "^2.47.0",
-    "@types/aos": "^3.0.7",
-    "aos": "^2.3.4",
     "embla-carousel-react": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-google-recaptcha-v3": "^1.10.1",
     "react-router-dom": "^6.21.0"
   },
   "devDependencies": {

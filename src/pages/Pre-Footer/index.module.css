@@ -1,14 +1,12 @@
 .wrapper {
   position: relative;
-  padding-top: rem(180px);
-  padding-bottom: rem(130px);
+  padding: rem(180px) 0;
   background-image: url('/images/pre-footer.webp');
   background-size: cover;
   background-position: center;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    padding-top: rem(80px);
-    padding-bottom: rem(50px);
+    padding: rem(80px) 0;
   }
 }
 
@@ -43,7 +41,7 @@
   }
 }
 
-.control {
+.button {
   height: rem(42px);
   font-size: var(--mantine-font-size-md);
 }
