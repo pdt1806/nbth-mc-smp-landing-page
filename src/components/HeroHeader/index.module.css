@@ -44,4 +44,9 @@
 .button {
   height: rem(42px);
   font-size: var(--mantine-font-size-md);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    margin: 0 var(--mantine-spacing-md);
+    width: 100%;
+  }
 }

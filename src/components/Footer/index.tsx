@@ -1,6 +1,7 @@
 import { ActionIcon, Container, Group, rem, Title } from '@mantine/core';
 import { IconBrandDiscord, IconBrandX, IconBrandYoutube } from '@tabler/icons-react';
 import { Link } from 'react-router-dom';
+import { serverIP } from '../../utils/const';
 import classes from './index.module.css';
 
 const links = [
@@ -13,7 +14,7 @@ export function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Title order={3}>45.119.83.209</Title>
+        <Title order={3}>{serverIP}</Title>
         <Group gap={0} className={classes.links} justify="flex-end" wrap="nowrap">
           {links.map((link) => (
             <ActionIcon

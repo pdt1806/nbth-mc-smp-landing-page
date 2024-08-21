@@ -1,6 +1,7 @@
 import { Burger, Container, Group, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Link } from 'react-router-dom';
+import { serverIP } from '../../utils/const';
 import classes from './index.module.css';
 
 const links = [
@@ -22,7 +23,15 @@ export function Header() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <Title order={3}>45.119.83.209</Title>
+          <Title
+            order={3}
+            component={Link}
+            // @ts-expect-error something's wrong i can feel it
+            to="/"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            {serverIP}
+          </Title>
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>

@@ -25,7 +25,7 @@ const features = [
   {
     icon: IconPlug,
     title: 'Custom Plugins',
-    stat: '20+',
+    stat: '13',
     description: 'Enjoy a tailored gameplay experience with our custom-developed plugins.',
   },
 ];

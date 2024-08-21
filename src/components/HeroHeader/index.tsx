@@ -1,34 +1,44 @@
 import { Button, Center, Container, Overlay, Text, Title } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
+import { serverIP } from '../../utils/const';
+import { copyServerIP } from '../../utils/utils';
 import classes from './index.module.css';
 
 export function HeroHeader() {
+  const { t } = useTranslation();
+
   return (
     <div className={classes.wrapper}>
       <Overlay color="#000" opacity={1} zIndex={1} />
 
       <div className={classes.inner}>
         <Title className={classes.title}>
-          Craft Your Legacy on{' '}
+          {t('heroHeader.title')}{' '}
           <Text
             component="span"
             inherit
             variant="gradient"
             gradient={{ from: 'lightgreen', to: 'green' }}
           >
-            45.119.83.209
+            {serverIP}
           </Text>
         </Title>
 
         <Container size={640}>
           <Text size="lg" className={classes.description}>
-            Dive into endless adventures with a thriving community. Build, battle, and explore the
-            limitless possibilities. Join us today!
+            {t('heroHeader.description')}
           </Text>
         </Container>
 
         <Center mt="xl">
-          <Button className={classes.button} variant="white" size="lg" c="#286422">
-            Get IP Address
+          <Button
+            className={classes.button}
+            variant="white"
+            size="lg"
+            c="#286422"
+            onClick={copyServerIP}
+          >
+            {t('heroHeader.button')}
           </Button>
         </Center>
       </div>

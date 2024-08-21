@@ -5,6 +5,7 @@ import {
   IconHeartHandshake,
   IconHeartRateMonitor,
 } from '@tabler/icons-react';
+import { serverIP } from '../../utils/const';
 import classes from './index.module.css';
 
 const data = [
@@ -54,7 +55,7 @@ export function About() {
       <Text className={classes.supTitle}>About this Server</Text>
 
       <Title className={classes.title} order={2}>
-        45.119.83.209 is <span className={classes.highlight}>not</span> just a Game; it&apos;s a
+        {serverIP} is <span className={classes.highlight}>not</span> just a Server; it&apos;s a
         Journey
       </Title>
 
