@@ -14,9 +14,9 @@ export default function Gallery() {
   ));
 
   const [embla0, setEmbla0] = useState<Embla | null>(null);
-  useAnimationOffsetEffect(embla0, 1);
+  useAnimationOffsetEffect(embla0, 175); // eggu's reaction time
   const [embla1, setEmbla1] = useState<Embla | null>(null);
-  useAnimationOffsetEffect(embla1, 1);
+  useAnimationOffsetEffect(embla1, 175);
 
   return (
     <Box className={classes.wrapper} id="gallery">

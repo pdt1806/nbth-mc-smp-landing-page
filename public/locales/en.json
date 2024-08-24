@@ -65,5 +65,10 @@
   "copyServerIP": {
     "title": "Server IP is copied to clipboard!",
     "message": "Enjoy your adventure!"
+  },
+  "error404": {
+    "title": "Nothing to see here",
+    "description": "The page you're trying to access doesn't exist. You may have entered the address incorrectly, or the page might have been moved to a different URL. If you believe this is a mistake, please contact support.",
+    "button": "Get back to home page"
   }
 }

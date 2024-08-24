@@ -65,5 +65,10 @@
   "copyServerIP": {
     "title": "Đã sao chép địa chỉ IP máy chủ!",
     "message": "Chúc bạn có một cuộc phiêu lưu vui vẻ!"
+  },
+  "error404": {
+    "title": "Trang không tồn tại",
+    "description": "Xin lỗi, trang bạn đang tìm kiếm không tồn tại. Hãy kiểm tra lại đường dẫn, hoặc có thể trang đã được chuyển đến địa chỉ khác. Nếu bạn cần hỗ trợ, vui lòng liên hệ với chúng tôi.",
+    "button": "Quay lại trang chủ"
   }
 }
