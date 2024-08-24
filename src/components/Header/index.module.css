@@ -24,6 +24,12 @@
   @mixin hover {
     background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
   }
+
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    width: 100%;
+    text-align: center;
+    padding: var(--mantine-spacing-md) 0;
+  }
 }
 
 .linkLabel {

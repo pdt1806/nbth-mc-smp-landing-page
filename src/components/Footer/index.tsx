@@ -24,6 +24,7 @@ export function Footer() {
               component={Link}
               to={link.link}
               target="_blank"
+              key={link.link}
             >
               <link.icon style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
             </ActionIcon>

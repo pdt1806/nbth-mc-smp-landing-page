@@ -36,7 +36,7 @@ export function About() {
   ];
 
   const items = data.map((item) => (
-    <div className={classes.item} key={item.icon?.name}>
+    <div className={classes.item} key={item.title}>
       <ThemeIcon variant="light" color="green" className={classes.itemIcon} size={60} radius="md">
         <item.icon />
       </ThemeIcon>
