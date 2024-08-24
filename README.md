@@ -3,7 +3,7 @@
 
 ## How come a Landing page for this SMP?
 
-<img src="https://raw.githubusercontent.com/pdt1806/nbth-mc-smp-landing-page/main/public/images/the-cause.png" width="200" />
+<img src="https://raw.githubusercontent.com/pdt1806/nbth-mc-smp-landing-page/main/public/images/the-cause.png" />
 
 ```
 Translation:
