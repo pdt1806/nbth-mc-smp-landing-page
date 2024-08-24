@@ -36,7 +36,7 @@ export function HeroHeader() {
             variant="white"
             size="lg"
             c="#286422"
-            onClick={copyServerIP}
+            onClick={() => copyServerIP({ t })}
           >
             {t('heroHeader.button')}
           </Button>

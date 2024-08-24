@@ -1,36 +1,38 @@
 import { Box, Container, Grid, rem, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core';
 import { IconPlug, IconServer, IconUsers, IconVersions } from '@tabler/icons-react';
+import { useTranslation } from 'react-i18next';
 import classes from './index.module.css';
 
-const features = [
-  {
-    icon: IconVersions,
-    title: 'Version',
-    stat: '1.19 - 1.21',
-    description:
-      'Stay updated with the latest features and improvements. Our server runs the newest version to ensure you have the best gameplay experience.',
-  },
-  {
-    icon: IconUsers,
-    title: 'Current Players',
-    stat: '23',
-    description: 'Be active and join the fun!',
-  },
-  {
-    icon: IconServer,
-    title: 'Uptime',
-    stat: '99.9%',
-    description: 'Our server is almost always online, ready for your next adventure.',
-  },
-  {
-    icon: IconPlug,
-    title: 'Custom Plugins',
-    stat: '13',
-    description: 'Enjoy a tailored gameplay experience with our custom-developed plugins.',
-  },
-];
-
 export function Statistics() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: IconVersions,
+      title: t('statistics.version.title'),
+      stat: '1.19 - 1.21',
+      description: t('statistics.version.description'),
+    },
+    {
+      icon: IconUsers,
+      title: t('statistics.players.title'),
+      stat: '23',
+      description: t('statistics.players.description'),
+    },
+    {
+      icon: IconServer,
+      title: t('statistics.uptime.title'),
+      stat: '99.9%',
+      description: t('statistics.uptime.description'),
+    },
+    {
+      icon: IconPlug,
+      title: t('statistics.plugins.title'),
+      stat: '13',
+      description: t('statistics.plugins.description'),
+    },
+  ];
+
   const items = features.map((feature) => (
     <div key={feature.title}>
       <ThemeIcon
@@ -56,11 +58,9 @@ export function Statistics() {
         <Grid gutter={60}>
           <Grid.Col span={{ base: 12, md: 5 }}>
             <Title className={classes.title} order={2} c="black">
-              Statistics
+              {t('statistics.title')}
             </Title>
-            <Text c="dimmed">
-              Get up-to-date information on the server&apos;s performance and player activity.
-            </Text>
+            <Text c="dimmed">{t('statistics.description')}</Text>
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 7 }}>
             <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>

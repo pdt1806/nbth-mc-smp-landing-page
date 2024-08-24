@@ -16,7 +16,7 @@
   margin-bottom: calc(var(--mantine-spacing-xs) / 2);
 }
 
-.supTitle {
+.subtitle {
   text-align: center;
   text-transform: uppercase;
   font-weight: 800;
