@@ -1,22 +1,37 @@
-import { Carousel, Embla, useAnimationOffsetEffect } from '@mantine/carousel';
+import { Carousel, Embla } from '@mantine/carousel';
 import { Badge, Box, Container, Image, Text, Title } from '@mantine/core';
-import { useState } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import classes from './index.module.css';
 
 export default function Gallery() {
   const { t } = useTranslation();
+  const numberOfImages = 6;
+  const [loadedImages, setLoadedImages] = useState(0);
 
-  const slides = Array.from({ length: 6 }).map((_, index) => (
+  const [embla, setEmbla] = useState<Embla | null>(null);
+
+  const autoplay = useRef(Autoplay({ delay: 3000 }));
+
+  const slides = Array.from({ length: numberOfImages }).map((_, index) => (
     <Carousel.Slide key={`gallery_slide_${index}`}>
-      <Image src={`images/gallery/${index}.webp`} alt={`Slide ${index}`} height="100%" />
+      <Image
+        src={`images/gallery/${index}.webp`}
+        alt={`Slide ${index}`}
+        height="100%"
+        onLoad={() => {
+          setLoadedImages((current) => current + 1);
+        }}
+      />
     </Carousel.Slide>
   ));
 
-  const [embla0, setEmbla0] = useState<Embla | null>(null);
-  useAnimationOffsetEffect(embla0, 175); // eggu's reaction time
-  const [embla1, setEmbla1] = useState<Embla | null>(null);
-  useAnimationOffsetEffect(embla1, 175);
+  useEffect(() => {
+    if (loadedImages >= numberOfImages) {
+      embla?.reInit();
+    }
+  }, [loadedImages]);
 
   return (
     <Box className={classes.wrapper} id="gallery">
@@ -33,18 +48,16 @@ export default function Gallery() {
       </Container>
       <Carousel
         mt="xl"
-        getEmblaApi={setEmbla0}
-        dragFree
-        slideSize="50%"
-        slideGap="md"
-        height={500}
+        getEmblaApi={setEmbla}
+        plugins={[autoplay.current]}
+        onMouseEnter={autoplay.current.stop}
+        onMouseLeave={autoplay.current.reset}
+        slideSize={{ base: '100%', md: '50%' }}
+        slideGap={{ base: 0, md: 'md' }}
+        h={{ base: 400, md: 500 }}
+        height="100%"
         loop
-        initialSlide={2}
-        visibleFrom="md"
       >
-        {slides}
-      </Carousel>
-      <Carousel mt="xl" getEmblaApi={setEmbla1} height={400} loop initialSlide={2} hiddenFrom="md">
         {slides}
       </Carousel>
     </Box>

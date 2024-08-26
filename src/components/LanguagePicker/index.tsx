@@ -22,7 +22,7 @@ export function LanguagePicker() {
   }, [selected]);
   const items = Object.values(data).map((item) => (
     <Menu.Item
-      leftSection={<Image src={`images/flags/${item.image}.svg`} width={18} height={18} />}
+      leftSection={<Image src={`images/flags/${item.image}.svg`} w={18} h={18} />}
       onClick={() => setSelected(item)}
       key={item.label}
     >

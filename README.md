@@ -10,7 +10,7 @@ Translation:
 - nbth (the SMP owner): tell Egg to build a [landing] page for the MC [server]
 - toby: [continue the previous conversation]
 - nbth: make it look nice
-- toby: @pdt1806 log arcade 🔥
+- toby: @pdteggman log arcade 🔥
 - toby: egg is already back in school so he is busy
 - nbth: [continue the previous conversation]
 - egg (me): say less
