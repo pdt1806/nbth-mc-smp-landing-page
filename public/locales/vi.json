@@ -70,5 +70,12 @@
     "title": "Trang không tồn tại",
     "description": "Xin lỗi, trang bạn đang tìm kiếm không tồn tại. Hãy kiểm tra lại đường dẫn, hoặc có thể trang đã được chuyển đến địa chỉ khác. Nếu bạn cần hỗ trợ, vui lòng liên hệ với chúng tôi.",
     "button": "Quay lại trang chủ"
+  },
+  "fundraiser": {
+    "title": "Xin đừng bỏ qua và Hãy ủng hộ chúng tôi!",
+    "descriptionLeft": "Tôi đang gây quỹ cho",
+    "eventName": "Chuyến đi hòa nhạc của Đội hợp xướng Trường Trung học Antelope năm 2025",
+    "descriptionRight": "và rất mong nhận được sự ủng hộ từ bạn! Mỗi đóng góp, dù lớn hay nhỏ, đều đưa chúng tôi đến gần hơn với mục tiêu của mình. Cảm ơn rất nhiều vì sự rộng lượng của bạn!",
+    "button": "Ủng hộ chúng tôi!"
   }
 }

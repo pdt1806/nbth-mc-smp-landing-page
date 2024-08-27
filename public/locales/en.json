@@ -70,5 +70,12 @@
     "title": "Nothing to see here",
     "description": "The page you're trying to access doesn't exist. You may have entered the address incorrectly, or the page might have been moved to a different URL. If you believe this is a mistake, please contact support.",
     "button": "Get back to home page"
+  },
+  "fundraiser": {
+    "title": "Don't Skip This - Make a Difference!",
+    "descriptionLeft": "I'm raising funds for the",
+    "eventName": "Antelope High School Choir Tour 2025",
+    "descriptionRight": "and would greatly appreciate your support! Every donation brings us closer to our goal. Thank you so much for your generosity!",
+    "button": "Support us!"
   }
 }
